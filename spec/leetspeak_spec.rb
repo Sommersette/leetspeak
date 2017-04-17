@@ -16,6 +16,10 @@ describe('String#leetspeak') do
   end
 
   it('replaces every "s" that is not the first letter in the word to a "z"') do
-    expect(("sassafras").leetspeak).to eq("sazzafraz")
+    expect(("sassafras").leetspeak).to eq("zazzafraz")
+  end
+
+  it('replaces "z" if it is the first letter of the word only back to "s"') do
+    expect(("zazzafraz").leetspeak).to eq("sazzafraz")
   end
 end
